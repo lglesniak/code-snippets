@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 32 32" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Icons--Navigation--Chevron--pos--right" fill-opacity="1">
+    <path d="M32 0L32 0L32 32L0 32L0 0L32 0Z" id="Icons--Navigation--Chevron--pos--right" fill="none" stroke="none" />
+    <path d="M0 0L32 0L32 32L0 32L0 0Z" id="Rectangle" fill="none" fill-rule="evenodd" stroke="none" />
+    <path d="M10 29L22 16L10 3" id="Path" fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-width="2" />
+  </g>
+</svg>

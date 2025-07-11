@@ -1,0 +1,129 @@
+* {
+  cursor: url("cursor.png"), default !important;
+}
+
+.custom-cursor-ball {
+  opacity: 0;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) rotate(0deg);
+  box-sizing: border-box;
+  background: $color-black;
+  border: $outline-black;
+  z-index: 100000;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  transition: background .3s ease, width .3s ease, height .3s ease, border .3s ease, opacity .3s ease .4s;
+
+  @media (hover: none) {
+    display: none !important;
+  }
+
+  &.-active {
+    opacity: 1;
+  }
+
+  &.-white {
+    background: $color-white;
+    border: $outline-white;
+  }
+  &.-target {
+    background: none !important;
+    border: $outline-light-gray-3;
+    width: 32px;
+    height: 32px;
+  }
+  &.-slider {
+    background: none !important;
+    border: $outline-light-gray-3;
+    width: 96px;
+    height: 96px;
+  }
+}
+
+.custom-cursor-slider {
+  opacity: 0;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+  box-sizing: border-box;
+  z-index: 100001;
+  width: 96px;
+  height: 96px;
+  pointer-events: none;
+  transition: transform .3s ease, opacity .3s ease;
+
+  @media (hover: none) {
+    display: none !important;
+  }
+
+  &.-active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .left-arrow {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: calc(50% + 4px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("chevrons-left.svg");
+    transition: all .3s ease;
+  }
+  .right-arrow {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: calc(50% + 4px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("chevrons-right.svg");
+    transition: all .3s ease;
+  }
+  &.-left-arrow {
+    .left-arrow {
+      opacity: 1;
+    }
+    .right-arrow {
+      opacity: .6;
+    }
+  }
+  &.-right-arrow {
+    .left-arrow {
+      opacity: .6;
+    }
+    .right-arrow {
+      opacity: 1;
+    }
+  }
+}
+
+.vjs-fullscreen, .vjs-youtube {
+  cursor: auto !important;
+  * {
+    cursor: auto !important;
+  }
+  .vjs-play-control, .vjs-fullscreen-control, .vjs-big-play-button, .vjs-poster {
+    cursor: pointer !important;
+    * {
+      cursor: pointer !important;
+    }
+  }
+}
+
+.contact-form-section {
+  cursor: auto !important;
+  * {
+    cursor: auto !important;
+  }
+}
+
+:not(:root):fullscreen::backdrop {
+  cursor: auto !important;
+}
+
+.vjs-iframe-blocker {
+  //display: block !important;
+}
